@@ -1,7 +1,42 @@
+import { Tune } from "@mui/icons-material";
+import { useFormik } from "formik";
 import React from "react";
 import { Link } from "react-router-dom";
+import * as Yup from 'yup'
 
 function Contact(props) {
+
+  const contactSchema = Yup.object({
+    name : Yup.string().max(25).min(2).matches(/^[a-z]+$/ , 'Please enter valid name').required(),
+    email : Yup.string().email().required(),
+    subject : Yup.string().required(),
+    message : Yup.string().test('message' , 'Please Enter Max 100 Words.' , function(val){
+      let arr = val.split(" ") 
+      if (arr.length > 5){
+          return false
+      }  else {
+        return true
+      }
+
+    }).required(),
+  })
+
+  const formik = useFormik({
+    initialValues : {
+      name : '',
+      email : '' ,
+      subject : '' ,
+      message : ''
+    },
+    validationSchema : contactSchema ,
+    enableReinitialize : true ,
+    onSubmit : (values , action) => {
+      action.resetForm()
+      console.log(values);
+    }   
+  })
+
+  const {values , errors , touched , handleBlur , handleChange , handleSubmit} = formik
   return (
     <>
       <main id="main">
@@ -73,6 +108,7 @@ function Contact(props) {
                   method="post"
                   role="form"
                   className="php-email-form"
+                  onSubmit={handleSubmit}
                 >
                   <div className="row">
                     <div className="col-md-6 form-group">
@@ -82,8 +118,11 @@ function Contact(props) {
                         className="form-control"
                         id="name"
                         placeholder="Your Name"
-                        required
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.name}
                       />
+                      <span style={{color : 'red'}}>{errors.name && touched.name ? errors.name : null}</span>
                     </div>
                     <div className="col-md-6 form-group mt-3 mt-md-0">
                       <input
@@ -92,8 +131,11 @@ function Contact(props) {
                         name="email"
                         id="email"
                         placeholder="Your Email"
-                        required
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.email}
                       />
+                      <span style={{color : 'red'}}>{errors.email && touched.email ? errors.email : null}</span>
                     </div>
                   </div>
                   <div className="form-group mt-3">
@@ -103,8 +145,11 @@ function Contact(props) {
                       name="subject"
                       id="subject"
                       placeholder="Subject"
-                      required
+                      onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.subject}
                     />
+                    <span style={{color : 'red'}}>{errors.subject && touched.subject ? errors.subject : null}</span>
                   </div>
                   <div className="form-group mt-3">
                     <textarea
@@ -112,9 +157,11 @@ function Contact(props) {
                       name="message"
                       rows={5}
                       placeholder="Message"
-                      required
-                      defaultValue={""}
+                      onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.message}
                     />
+                    <span style={{color : 'red'}}>{errors.message && touched.message ? errors.message : null}</span>
                   </div>
                   <div className="my-3">
                     <div className="loading">Loading</div>
@@ -124,7 +171,7 @@ function Contact(props) {
                     </div>
                   </div>
                   <div className="text-center">
-                    <button type="submit">Send Message</button>
+                    <button type="submit">Submit</button>
                   </div>
                 </form>
               </div>
