@@ -6,10 +6,11 @@ import Home from "../users/containers/Home";
 import About from "../users/containers/About";
 import Services from "../users/containers/Services";
 import Pricing from "../users/containers/Pricing";
-import Testimonials from "../users/containers/Testimonials";
+// import Testimonials from "../users/containers/Testimonials";
 import Contact from "../users/containers/Contact";
 import Portfolio from "../users/containers/Portfolio";
 import Blog from "../users/containers/Blog";
+import Testomonials from "../users/testimonials/Testomonials";
 
 function UsersRoutes(props) {
   return (
@@ -20,7 +21,7 @@ function UsersRoutes(props) {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/testimonials" element={<Testomonials />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
