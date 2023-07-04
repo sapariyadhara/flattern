@@ -60,7 +60,7 @@ function Testomonials(props) {
           </div>
       <section id="testimonials" className="testimonials">
         <div className="container">
-          <div className="row gap-3">
+          <div className="row ">
             <ListPartners tmData={filterData.length > 0 ? filterData : data} />
           </div>
         </div>
