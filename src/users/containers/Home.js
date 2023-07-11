@@ -1,4 +1,7 @@
 import React from "react";
+import { A, Box, H4, I, IconD } from "../components/Ui/IconBox/IconBoxC.style";
+import {  An, H2 , P } from "../components/Ui/Haddings/Hadding.style";
+import Image from "../components/Ui/Image/Image";
 
 function Home(props) {
   return (
@@ -20,20 +23,20 @@ function Home(props) {
               >
                 <div className="carousel-container">
                   <div className="carousel-content animate__animated animate__fadeInUp">
-                    <h2>
+                    <H2>
                       Welcome to <span>Flattern</span>
-                    </h2>
-                    <p>
+                    </H2>
+                    <P>
                       Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea
                       ut et est quaerat sequi nihil ut aliquam. Occaecati alias
                       dolorem mollitia ut. Similique ea voluptatem. Esse
                       doloremque accusamus repellendus deleniti vel. Minus et
                       tempore modi architecto.
-                    </p>
+                    </P>
                     <div className="text-center">
-                      <a href className="btn-get-started">
+                      <An href className="btn-get-started">
                         Read More
-                      </a>
+                      </An>
                     </div>
                   </div>
                 </div>
@@ -45,18 +48,18 @@ function Home(props) {
               >
                 <div className="carousel-container">
                   <div className="carousel-content animate__animated animate__fadeInUp">
-                    <h2>Lorem Ipsum Dolor</h2>
-                    <p>
+                    <H2>Lorem Ipsum Dolor</H2>
+                    <P>
                       Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea
                       ut et est quaerat sequi nihil ut aliquam. Occaecati alias
                       dolorem mollitia ut. Similique ea voluptatem. Esse
                       doloremque accusamus repellendus deleniti vel. Minus et
                       tempore modi architecto.
-                    </p>
+                    </P>
                     <div className="text-center">
-                      <a href className="btn-get-started">
+                      <An href className="btn-get-started">
                         Read More
-                      </a>
+                      </An>
                     </div>
                   </div>
                 </div>
@@ -68,7 +71,7 @@ function Home(props) {
               >
                 <div className="carousel-container">
                   <div className="carousel-content animate__animated animate__fadeInUp">
-                    <h2>Sequi ea ut et est quaerat</h2>
+                    <H2>Sequi ea ut et est quaerat</H2>
                     <p>
                       Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea
                       ut et est quaerat sequi nihil ut aliquam. Occaecati alias
@@ -77,9 +80,9 @@ function Home(props) {
                       tempore modi architecto.
                     </p>
                     <div className="text-center">
-                      <a href className="btn-get-started">
+                      <A href className="btn-get-started">
                         Read More
-                      </a>
+                      </A>
                     </div>
                   </div>
                 </div>
@@ -129,9 +132,9 @@ function Home(props) {
                   </p>
                 </div>
                 <div className="col-lg-3 cta-btn-container text-center">
-                  <a className="cta-btn align-middle" href="#">
+                  <An  href="#">
                     Request a quote
-                  </a>
+                  </An>
                 </div>
               </div>
             </div>
@@ -142,109 +145,89 @@ function Home(props) {
             <div className="container">
               <div className="row">
                 <div className="col-lg-4 col-md-6">
-                  <div className="icon-box" data-aos="fade-up">
-                    <div className="icon">
-                      <i className="bi bi-briefcase" />
-                    </div>
-                    <h4 className="title">
-                      <a href>Lorem Ipsum</a>
-                    </h4>
-                    <p className="description">
+                  <Box>
+                    <IconD className="icon">
+                      <I className="bi bi-briefcase" />
+                    </IconD>
+                    <H4 className="title">
+                      <A href>Lorem Ipsum</A>
+                    </H4>
+                    <P className="description">
                       Voluptatum deleniti atque corrupti quos dolores et quas
                       molestias excepturi sint occaecati cupiditate non
                       provident
-                    </p>
-                  </div>
+                    </P>
+                  </Box>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div
-                    className="icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay={100}
-                  >
-                    <div className="icon">
-                      <i className="bi bi-card-checklist" />
-                    </div>
-                    <h4 className="title">
-                      <a href>Dolor Sitema</a>
-                    </h4>
-                    <p className="description">
+                  <Box>
+                    <IconD>
+                      <I className="bi bi-card-checklist" />
+                    </IconD>
+                    <H4 className="title">
+                      <A href>Dolor Sitema</A>
+                    </H4>
+                    <P className="description">
                       Minim veniam, quis nostrud exercitation ullamco laboris
                       nisi ut aliquip ex ea commodo consequat tarad limino ata
-                    </p>
-                  </div>
+                    </P>
+                  </Box>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div
-                    className="icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay={200}
-                  >
-                    <div className="icon">
-                      <i className="bi bi-bar-chart" />
-                    </div>
-                    <h4 className="title">
-                      <a href>Sed ut perspiciatis</a>
-                    </h4>
-                    <p className="description">
+                  <Box>
+                    <IconD>
+                      <I className="bi bi-bar-chart" />
+                    </IconD>
+                    <H4 className="title">
+                      <A href>Sed ut perspiciatis</A>
+                    </H4>
+                    <P className="description">
                       Duis aute irure dolor in reprehenderit in voluptate velit
                       esse cillum dolore eu fugiat nulla pariatur
-                    </p>
-                  </div>
+                    </P>
+                  </Box>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div
-                    className="icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay={200}
-                  >
-                    <div className="icon">
-                      <i className="bi bi-binoculars" />
-                    </div>
-                    <h4 className="title">
-                      <a href>Magni Dolores</a>
-                    </h4>
-                    <p className="description">
+                  <Box>
+                    <IconD>
+                      <I className="bi bi-binoculars" />
+                    </IconD>
+                    <H4 className="title">
+                      <A href>Magni Dolores</A>
+                    </H4>
+                    <P className="description">
                       Excepteur sint occaecat cupidatat non proident, sunt in
                       culpa qui officia deserunt mollit anim id est laborum
-                    </p>
-                  </div>
+                    </P>
+                  </Box>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div
-                    className="icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay={300}
-                  >
-                    <div className="icon">
-                      <i className="bi bi-brightness-high" />
-                    </div>
-                    <h4 className="title">
-                      <a href>Nemo Enim</a>
-                    </h4>
-                    <p className="description">
+                  <Box>
+                    <IconD >
+                      <I className="bi bi-brightness-high" />
+                    </IconD>
+                    <H4 className="title">
+                      <A href>Nemo Enim</A>
+                    </H4>
+                    <P className="description">
                       At vero eos et accusamus et iusto odio dignissimos ducimus
                       qui blanditiis praesentium voluptatum deleniti atque
-                    </p>
-                  </div>
+                    </P>
+                  </Box>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div
-                    className="icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay={400}
-                  >
-                    <div className="icon">
-                      <i className="bi bi-calendar4-week" />
-                    </div>
-                    <h4 className="title">
-                      <a href>Eiusmod Tempor</a>
-                    </h4>
-                    <p className="description">
+                  <Box>
+                    <IconD>
+                      <I className="bi bi-calendar4-week" />
+                    </IconD>
+                    <H4 className="title">
+                      <A href>Eiusmod Tempor</A>
+                    </H4>
+                    <P className="description">
                       Et harum quidem rerum facilis est et expedita distinctio.
                       Nam libero tempore, cum soluta nobis est eligendi
-                    </p>
-                  </div>
+                    </P>
+                  </Box>
                 </div>
               </div>
             </div>
@@ -508,9 +491,9 @@ function Home(props) {
           <section id="clients" className="clients">
             <div className="container">
               <div className="section-title" data-aos="fade-up">
-                <h2>
+                <H2>
                   Our <strong>Clients</strong>
-                </h2>
+                </H2>
                 <p>
                   Magnam dolores commodi suscipit. Necessitatibus eius
                   consequatur ex aliquid fuga eum quidem. Sit sint consectetur
@@ -525,7 +508,7 @@ function Home(props) {
               >
                 <div className="col-lg-3 col-md-4 col-xs-6">
                   <div className="client-logo">
-                    <img
+                    <Image
                       src="assets/img/clients/client-1.png"
                       className="img-fluid"
                       alt
@@ -534,7 +517,7 @@ function Home(props) {
                 </div>
                 <div className="col-lg-3 col-md-4 col-xs-6">
                   <div className="client-logo">
-                    <img
+                    <Image
                       src="assets/img/clients/client-2.png"
                       className="img-fluid"
                       alt
@@ -543,7 +526,7 @@ function Home(props) {
                 </div>
                 <div className="col-lg-3 col-md-4 col-xs-6">
                   <div className="client-logo">
-                    <img
+                    <Image
                       src="assets/img/clients/client-3.png"
                       className="img-fluid"
                       alt
@@ -552,7 +535,7 @@ function Home(props) {
                 </div>
                 <div className="col-lg-3 col-md-4 col-xs-6">
                   <div className="client-logo">
-                    <img
+                    <Image
                       src="assets/img/clients/client-4.png"
                       className="img-fluid"
                       alt
@@ -561,7 +544,7 @@ function Home(props) {
                 </div>
                 <div className="col-lg-3 col-md-4 col-xs-6">
                   <div className="client-logo">
-                    <img
+                    <Image
                       src="assets/img/clients/client-5.png"
                       className="img-fluid"
                       alt
@@ -570,7 +553,7 @@ function Home(props) {
                 </div>
                 <div className="col-lg-3 col-md-4 col-xs-6">
                   <div className="client-logo">
-                    <img
+                    <Image
                       src="assets/img/clients/client-6.png"
                       className="img-fluid"
                       alt
@@ -579,7 +562,7 @@ function Home(props) {
                 </div>
                 <div className="col-lg-3 col-md-4 col-xs-6">
                   <div className="client-logo">
-                    <img
+                    <Image
                       src="assets/img/clients/client-7.png"
                       className="img-fluid"
                       alt
@@ -588,7 +571,7 @@ function Home(props) {
                 </div>
                 <div className="col-lg-3 col-md-4 col-xs-6">
                   <div className="client-logo">
-                    <img
+                    <Image
                       src="assets/img/clients/client-8.png"
                       className="img-fluid"
                       alt

@@ -3,18 +3,20 @@ import { useFormik } from "formik";
 import React from "react";
 import { Link } from "react-router-dom";
 import * as Yup from 'yup'
+import Input from "../components/Ui/Input/Input";
+import Button from "../components/Ui/Button/Button";
 
 function Contact(props) {
 
   const contactSchema = Yup.object({
-    name : Yup.string().max(25).min(2).matches(/^[a-z]+$/ , 'Please enter valid name').required(),
-    email : Yup.string().email().required(),
-    subject : Yup.string().required(),
-    message : Yup.string().test('message' , 'Please Enter Max 100 Words.' , function(val){
-      let arr = val.split(" ") 
-      if (arr.length > 5){
-          return false
-      }  else {
+    name: Yup.string().max(25).min(2).matches(/^[a-z]+$/, 'Please enter valid name').required(),
+    email: Yup.string().email().required(),
+    subject: Yup.string().required(),
+    message: Yup.string().test('message', 'Please Enter Max 100 Words.', function (val) {
+      let arr = val.split(" ")
+      if (arr.length > 5) {
+        return false
+      } else {
         return true
       }
 
@@ -22,21 +24,21 @@ function Contact(props) {
   })
 
   const formik = useFormik({
-    initialValues : {
-      name : '',
-      email : '' ,
-      subject : '' ,
-      message : ''
+    initialValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
     },
-    validationSchema : contactSchema ,
-    enableReinitialize : true ,
-    onSubmit : (values , action) => {
+    validationSchema: contactSchema,
+    enableReinitialize: true,
+    onSubmit: (values, action) => {
       action.resetForm()
       console.log(values);
-    }   
+    }
   })
 
-  const {values , errors , touched , handleBlur , handleChange , handleSubmit} = formik
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } = formik
   return (
     <>
       <main id="main">
@@ -112,7 +114,7 @@ function Contact(props) {
                 >
                   <div className="row">
                     <div className="col-md-6 form-group">
-                      <input
+                      <Input
                         type="text"
                         name="name"
                         className="form-control"
@@ -121,11 +123,12 @@ function Contact(props) {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.name}
+                        ErrorT={errors.name && touched.name ? errors.name : null}
                       />
-                      <span style={{color : 'red'}}>{errors.name && touched.name ? errors.name : null}</span>
+                      <span style={{ color: 'red' }}></span>
                     </div>
                     <div className="col-md-6 form-group mt-3 mt-md-0">
-                      <input
+                      <Input
                         type="email"
                         className="form-control"
                         name="email"
@@ -134,34 +137,37 @@ function Contact(props) {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.email}
+                        ErrorT={errors.email && touched.email ? errors.email : null}
                       />
-                      <span style={{color : 'red'}}>{errors.email && touched.email ? errors.email : null}</span>
+            
                     </div>
                   </div>
                   <div className="form-group mt-3">
-                    <input
+                    <Input
                       type="text"
                       className="form-control"
                       name="subject"
                       id="subject"
                       placeholder="Subject"
                       onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.subject}
+                      onBlur={handleBlur}
+                      value={values.subject}
+                      ErrorT={errors.subject && touched.subject ? errors.subject : null}
                     />
-                    <span style={{color : 'red'}}>{errors.subject && touched.subject ? errors.subject : null}</span>
+                 
                   </div>
                   <div className="form-group mt-3">
-                    <textarea
+                    <Input
                       className="form-control"
                       name="message"
                       rows={5}
                       placeholder="Message"
                       onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.message}
+                      onBlur={handleBlur}
+                      value={values.message}
+                      ErrorT={errors.message && touched.message ? errors.message : null}
                     />
-                    <span style={{color : 'red'}}>{errors.message && touched.message ? errors.message : null}</span>
+                  
                   </div>
                   <div className="my-3">
                     <div className="loading">Loading</div>
@@ -171,7 +177,8 @@ function Contact(props) {
                     </div>
                   </div>
                   <div className="text-center">
-                    <button type="submit">Submit</button>
+                    <Button>Submit</Button>
+                    {/* <button type="submit">Submit</button> */}
                   </div>
                 </form>
               </div>
