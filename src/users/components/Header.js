@@ -62,6 +62,9 @@ function Header(props) {
                   <Link to={'/pricing'}>Pricing</Link>
                 </li>
                 <li>
+                  <Link to={'/Counter'}>Counter</Link>
+                </li>
+                <li>
                   <Link to={'/portfolio'}>Portfolio</Link>
                 </li>
                 <li>
