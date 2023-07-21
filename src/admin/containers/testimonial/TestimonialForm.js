@@ -45,9 +45,9 @@ function TestimonialForm({onhandleAddData , onUpDate}) {
         }
       })
       .required(),
-      file: Yup.object().shape({
-        name: Yup.string().required()
-    }).required('File required'),
+    //   file: Yup.object().shape({
+    //     name: Yup.string().required()
+    // }).required('File required'),
     // img: Yup.string().required(),
   });
 
@@ -58,7 +58,7 @@ function TestimonialForm({onhandleAddData , onUpDate}) {
       designation: "",
       desc: "",
     //   img: "",
-    file:''
+    // file:''
     },
     validationSchema: testimSchema,
     enableReinitialize: true,
@@ -135,15 +135,15 @@ function TestimonialForm({onhandleAddData , onUpDate}) {
                             <span style={{ color: "red" }}>
                                 {errors.desc && touched.desc ? errors.desc : null}
                             </span>
-                            <input
+                            {/* <input
                                 type="file"
                                 margin="dense"
                                 src=""
                                 name="img"
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                // value={values.img}
-                            ></input>
+                                value={values.img}
+                            ></input> */}
                             {/* <span style={{ color: "red" }}>
                                 {errors.img && touched.img ? errors.img : null}
                             </span> */}
