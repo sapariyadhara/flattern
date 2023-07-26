@@ -3,7 +3,7 @@ import { rootReducer } from "./reducer"
 import thunk from "redux-thunk"
 
 export const configureStore = () => {
-    let store1 =createStore(rootReducer , applyMiddleware(thunk))
+    let store = createStore(rootReducer , applyMiddleware(thunk))
 
-    return store1
+    return store;
 }

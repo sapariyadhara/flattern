@@ -76,7 +76,7 @@ function PricingAdmin(props) {
     return (
         <>
          <Box height={100}/>
-            <h1 style={{fontSize : '40px', marginLeft:'250px'}}>Pricing1</h1>
+            <h1 style={{fontSize : '40px', marginLeft:'250px'}}>Pricing</h1>
         <PriceForm onhandleSubmit={handleSubmit} onupdate={update}/>
 
         <div style={{ height: 400, width: '100%' }}>

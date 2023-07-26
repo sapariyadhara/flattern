@@ -5,10 +5,10 @@ import AdminRoutes from "./routes/AdminRoutes";
 import UsersRoutes from "./routes/UsersRoutes";
 // import { configureStore } from "./users/redux/store";
 import { Provider } from "react-redux";
-import { configureStore } from "./users/redux/store";
+import { configureStore } from "./redux/store";
 
 function App() {
-  const store = configureStore();
+  const store = configureStore()
 
   return (
     <>

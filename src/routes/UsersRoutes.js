@@ -11,7 +11,7 @@ import Contact from "../users/containers/Contact";
 import Portfolio from "../users/containers/Portfolio";
 import Blog from "../users/containers/Blog";
 import Testomonials from "../users/testimonials/Testomonials";
-import Counter from "../users/containers/Counter/Counter";
+// import Counter from "../users/containers/Counter/Counter";
 
 function UsersRoutes(props) {
   return (
@@ -22,7 +22,7 @@ function UsersRoutes(props) {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/Counter" element={<Counter />} />
+        {/* <Route path="/Counter" element={<Counter />} /> */}
         <Route path="/testimonials" element={<Testomonials />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />

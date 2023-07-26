@@ -1,7 +1,8 @@
-// import { combineReducers } from "redux";
-// import { priceReducer } from "./price.reducer";
+import { combineReducers } from "redux";
+import { counterReducer } from "./counter.reducer";
+import { priceReducer } from "./price.reducer";
 
-// export const rootReducer = combineReducers({
-//     price : priceReducer
-
-// })
+export const rootReducer = combineReducers({
+    Counter : counterReducer ,
+    price : priceReducer
+})
